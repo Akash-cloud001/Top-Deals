@@ -289,13 +289,15 @@ a{
         fill: var(--c-grey-blue);
     }
     .nav-ul-slider{
-        animation: slider 150ms ease-in-out forwards ;
+        animation: slider 150ms ease-in-out forwards, opacity 150ms ease-in-out ;
     }
     @keyframes slider{
         form{
+            opacity: 0;
             right: -300px;
         }
         to{
+            opacity: 1;
             right: 0px;
         }
     }
