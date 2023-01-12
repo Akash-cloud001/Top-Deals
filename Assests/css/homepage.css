@@ -1,0 +1,137 @@
+@import './style.css';
+
+:root{
+    /* font-family */
+    --ff-poppins : 'Poppins', sans-serif;
+    --ff-roboto : 'Roboto', sans-serif;
+    --ff-passion : 'Passion One', cursive;
+
+    /* color-plate */
+    --c-red : #ec1e00;
+    --c-grey-blue : #232f3e;
+    --c-light-grey : #666666;
+    --c-lighter-grey: #dad7d7;
+    --c-white : #ffffff;
+    --c-darker-white : #f9f9f9;
+    /* margin */
+    --m-60 : 60px;
+    --m-30 : 30px;
+    --m-15 : 15px;
+
+    /* padding */
+    --p-60 : 60px;
+    --p-30 : 30px;
+    --p-15 : 15px;
+    
+    /* transition */
+    --transition : 150ms ease-in-out;
+}
+
+.hero{
+    position: relative;
+    padding-top: var(--p-60);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    transition: all var(--transition);
+}
+.hero::before{
+    position: absolute;
+    top:30px;
+    left: -20rem;
+    height: 100vh;
+    width: 50%;
+    content: '';
+    background: url('../images/svgs/2730317-e1e3e5.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.hero-header{
+    font-family: var(--ff-passion);
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--c-grey-blue);
+    z-index: 1;
+}
+.hero-header-one{
+    text-align: center;
+    margin-inline: auto;
+}
+#hero-fig-svg{
+    height: 558px;
+    width: 758px;
+    transition: all var(--transition);
+}
+@media screen and (max-width:1440px){
+    .hero-header{
+        font-size: 3rem;
+    }
+    .hero::before{
+        left: -19rem;
+    }
+    #hero-fig-svg{
+        height: 400px;
+        width: 550px;
+    }
+}
+@media screen and( max-width:1024px){
+    .hero::before {
+        left: -42rem;
+        top: 11rem;
+        width: 100%;
+    }
+}
+@media screen and (max-width:950px){
+    .hero-header{
+        font-size: 2.4rem;
+    }
+    .hero::before{
+        left: -19rem;
+        top: 5rem;
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px){
+    .hero-header{
+        font-size: 2.4rem;
+    }
+    .hero::before{
+        left: -20.5rem;
+        top: 4rem;
+        width: 65%;
+    }
+    #hero-fig-svg{
+        height: 400px;
+        width: 430px;
+    }
+}
+
+@media screen and (max-width:481px){
+    .hero{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+    .hero::before{
+        left: -3rem;
+        top: 33rem;
+        width: 122%;
+    }
+    #hero-fig-svg{
+        height: 400px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .hero-header{
+        font-size: 2.4rem;
+    }
+    #hero-fig-svg{
+        height: 400px;
+        width: 285px;
+    }
+}

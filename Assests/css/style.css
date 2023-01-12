@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* font-family */
+    --ff-poppins : 'Poppins', sans-serif;
+    --ff-roboto : 'Roboto', sans-serif;
+    --ff-passion : 'Passion One', cursive;
+
+    /* color-plate */
+    --c-red : #ec1e00;
+    --c-grey-blue : #232f3e;
+    --c-light-grey : #666666;
+    --c-lighter-grey: #dad7d7;
+    --c-white : #ffffff;
+    --c-darker-white : #f9f9f9;
+    /* margin */
+    --m-60 : 60px;
+    --m-30 : 30px;
+    --m-15 : 15px;
+
+    /* padding */
+    --p-60 : 60px;
+    --p-30 : 30px;
+    --p-15 : 15px;
+
+}
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* margin-top: 80px; */
+}
+
+a{
+    text-decoration: none;
+}
+
+/* NAV */
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 3fr 0.5fr;
+    padding-inline: var(--p-60);
+    background-color: var(--c-grey-blue);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    z-index: 4;
+}
+
+.nav-figure{
+    position: relative;
+    grid-column-start: 2;
+}
+.nav-figure-img{
+    width: 70px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+
+.nav-ul{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    list-style: none;
+    font-family: var(--ff-poppins);
+    color: var(--c-white);
+}
+.nav-ul-li{
+    position: relative;
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--p-15);
+    font-size: medium;
+    transition: scale 150ms ease-in-out, background-color 150ms ease-in-out , border-bottom 150ms ease-in-out;
+    cursor: pointer;
+    z-index: 5;
+}
+.nav-ul-li:hover{
+    background-color: var(--c-red);
+}
+.nav-ul-li:last-child{
+    z-index: 5;
+}
+.nav-ul-li > a{
+    color: var(--c-white);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-dropdown-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: inherit;
+    position: relative;
+    background: transparent;
+    color: var(--c-white);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.dropdown-arrow-down{
+    padding-top: 7px;
+}
+.svg > g {
+    fill: var(--c-white);
+}
+.nav-dropdown-anchor{
+    color: var(--c-white);
+}
+
+.nav-dropdown-items{
+    display: grid;
+    position: absolute;
+    background: var(--c-darker-white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    top: 100%;
+    max-width: 400px;
+    width: 400px;
+    place-items: flex-start;
+    grid-template-rows: repeat(7,1fr);
+    height: auto;
+    max-height: 50vh;
+    font-size: smaller;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    z-index: 5;
+    transition: all 150ms ease-in-out;
+}
+.dropdown-layer{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.hide{
+    display: none;
+}
+
+
+.nav-dropdown-items::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: 5px;
+}
+.nav-dropdown-anchor{
+    color: var(--c-light-grey);
+    padding: var(--p-15) 0px 5px var(--p-15);
+    width: 100%;
+    height: 100%;
+}
+.nav-dropdown-anchor:hover{
+    background-color: #f1f1f1;
+    
+}
+
+.nav-hamburger{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.line{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;  
+    transition: all 150ms ease-in-out;
+}
+
+.line-f{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    position: absolute;
+    rotate: 45deg;
+    transform: -50%,-50%;
+    left: 50%;
+    top: 50%;
+}
+.line-t{
+    position: absolute;
+    rotate: 45deg;
+    transform: -50%,-50%;
+    rotate: -45deg;
+    left: 50%;
+    top: 50%;
+}
+.line-s{
+    scale: 0;
+}
+
+/* breadcrumbs */
+.breadcrumbs{
+    position: absolute;
+    top: 80px;
+    padding-inline: calc(var(--p-15));
+    font-size: large;
+    background-color: var(--c-lighter-grey);
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width:1024px ){
+    .nav{
+        grid-template-columns: 0.1fr 1fr 3fr 0.1fr;
+    }
+    .nav-figure-img{
+        width: 65px;
+    }
+    .nav-ul-li{
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width:768px){
+    .nav{
+        grid-template-columns: 1fr 3fr 1fr;
+        place-items: center;
+        padding-inline: 0;
+    }
+    
+    .nav-hamburger{
+        grid-column-start: 3;
+        display: flex; 
+        z-index: 5;
+    }
+    .nav-figure{
+        grid-column-start: 1;
+    }
+    .nav-figure-img{
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+    }
+    .nav-ul{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        top: 100%;
+        right: -300px;
+        width: 250px;
+        height: max-content;
+        gap: 0px;
+        background: var(--c-darker-white);
+        color: black;
+        transition: position 150ms ease-in-out; 
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        /* z-index: 5; */
+    }
+    .nav-ul-li{
+        width: 100%;
+        border-top: 1px solid var(--c-grey-blue);
+        height: max-content;
+        padding: var(--p-15);
+        /* z-index: 5; */
+    }
+    .nav-ul-li > a, .nav-dropdown-btn{
+        color: var(--c-grey-blue);
+    }
+    .svg > g {
+        fill: var(--c-grey-blue);
+    }
+    .nav-ul-slider{
+        animation: slider 150ms ease-in-out forwards ;
+    }
+    @keyframes slider{
+        form{
+            right: -300px;
+        }
+        to{
+            right: 0px;
+        }
+    }
+
+}
+
+@media screen and (max-width:425px){
+    .nav-figure-img{
+        width: 60px;
+    }
+    .nav-ul-li{
+        padding: calc(var(--p-15) / 2);
+    }
+    .nav-dropdown-items{
+        width: 375px;
+    }
+
+}
+@media screen and (max-width:320px) {
+    .nav{
+        padding-inline: 5px;
+    }
+    .nav-ul-li{
+        width: 100%;
+    }
+    .nav-dropdown-items{
+        width: 100%;
+    }
+}
