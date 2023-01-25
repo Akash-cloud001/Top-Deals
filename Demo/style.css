@@ -1,0 +1,223 @@
+@import '../Assests/css/style.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    /* margin-top: 80px; */
+}
+
+:root{
+    /* font-family */
+    --ff-poppins : 'Poppins', sans-serif;
+    --ff-roboto : 'Roboto', sans-serif;
+    --ff-passion : 'Passion One', cursive;
+
+    /* color-plate */
+    --c-red : #ec1e00;
+    --c-grey-blue : #232f3e;
+    --c-light-grey : #666666;
+    --c-lighter-grey: #dad7d7;
+    --c-white : #ffffff;
+    --c-darker-white : #f9f9f9;
+    --c-darkest-white : #e7e7e7;
+    --c-green : #377D71;
+    --c-dark-baby-pink : #FBA1A1;
+    --c-orange-shade : #cc691b;
+    /* margin */
+    --m-60 : 60px;
+    --m-30 : 30px;
+    --m-15 : 15px;
+
+    /* padding */
+    --p-60 : 60px;
+    --p-30 : 30px;
+    --p-15 : 15px;
+    
+    /* transition */
+    --transition : 150ms ease-in-out;
+}
+
+
+.products-container{
+    padding: var(--p-60);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.product-section-header{
+    text-align:center;
+    font-size: 3rem;
+    font-family: var(--ff-poppins);
+    color: var(--c-green);
+    text-transform: uppercase;
+}
+
+.product-card-container{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-inline: auto;
+    gap: 40px;
+    height: 250px;
+    flex-wrap: nowrap;
+    /* border: 1px solid rebeccapurple; */
+}
+
+.product-card-container:nth-child(odd){
+    margin-top: var(--m-30);
+    background: var(--c-white);
+}
+.product-card-container:nth-child(even){
+    margin-top: var(--m-30);
+    background: var(--c-darker-white);
+}
+/*
+--product-card-container-width : 80%;
+--product-card-container-gap : 40px;
+--product-card-container-height : 250px;
+
+--product-card-img-h : 250px;
+--product-card-img-w : 350px;
+
+--product-card-details-h : 100%;
+--product-card-max-width : 950px;
+*/
+.product-card-img{
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+}
+
+.product-img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: scale var(--transition);
+}
+/* .product-img:hover{
+    scale: 1.1;
+} */
+.product-details{
+    position: relative;
+    height: 100%;
+    font-family: var(--ff-poppins);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product-header{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--c-grey-blue);
+    text-transform: uppercase;
+}
+
+.product-price{
+    font-size: 1.3rem;
+    color: var(--c-red);
+}
+.product-defination{
+    font-size: 1.1rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+    text-align: justify;
+    max-width: 950px;
+}
+
+.product-defination::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: 5px;
+}
+
+.product-anchor{
+    color: var(--c-light-grey);
+    height: max-content;
+    padding: calc(var(--p-15) / 2);
+    width: max-content;
+    background:var(--c-darkest-white);
+    font-weight: 600;
+    font-size: large;
+    transition: all var(--transition);
+}
+.product-anchor:hover{
+    background: var(--c-orange-shade);
+    color: var(--c-darkest-white);
+}
+/* 
+
+#hero-fig-svg{
+    height: 558px;
+    width: 758px;
+    transition: all var(--transition);
+} */
+
+.loader-div{
+    height: auto;
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+    /* padding: var(--p-60); */
+}
+.loader-container{
+    height: 100%;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.loader-img{
+    position: relative;
+    background-color: #ececec;
+    height: 250px;
+    width: 350px;
+}
+
+.loader-content{
+    position: relative;
+    max-width: 950px;
+    width: 75%;
+    height: 250px;
+    background: #ececec;
+}
+
+.loader-img::after, .loader-content::after{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 60%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(0%);
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: loaderAnimation 1.5s ease-in-out 0s infinite alternate both ;
+}
+
+@keyframes loaderAnimation{
+    100%{
+        transform: translateX(50%);
+    }
+}

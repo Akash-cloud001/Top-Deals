@@ -76,6 +76,28 @@
     flex-direction: column;
 }
 
+.product-section-header{
+    position: relative;
+    font-size: 3rem;
+    font-family: var(--ff-passion);
+    letter-spacing: 0.1rem;
+    color: var(--c-white);
+    text-transform: uppercase;
+    background: var(--c-green);
+    width: fit-content;
+    margin-inline: auto;
+    padding-inline: var(--p-15);
+}
+.product-section-header::before,.product-section-header::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    width: 50%;
+    z-index: -1;
+    border: 1px solid var(--c-green);
+}
 .product-card-container{
     display: flex;
     width: 80%;
@@ -163,7 +185,9 @@
     color: var(--c-darkest-white);
 }
 
-
+.hero-fig{
+    z-index: 1;
+}
 #hero-fig-svg{
     height: 558px;
     width: 758px;
@@ -194,6 +218,9 @@
         width: 90%;
         gap: 30px;
     }
+    .product-section-header {
+        font-size: 2.5rem;
+    }
     .product-header{
         font-size: 1.5rem;
     }
@@ -217,6 +244,14 @@
         top: 5rem;
         width: 100%;
     }
+    #hero-fig-svg{
+        height: 400px;
+        width: 500px;
+    }
+    .product-card-container{
+        width: 100%;
+        gap: 25px;
+    }
     .product-defination {
         font-size: 1rem;
         width: 525px;
@@ -227,9 +262,7 @@
         font-size: 2.4rem;
     }
     .hero::before{
-        left: -20.5rem;
-        top: 4rem;
-        width: 65%;
+        display: none;
     }
     #hero-fig-svg{
         height: 400px;
@@ -237,7 +270,10 @@
     }
     .product-card-container{
         width: 100%;
-        gap: 25px;
+        gap: 20px;
+    }
+    .product-section-header{
+        font-size: 2.3rem;
     }
     .product-price{
         font-size: 1.1rem;
@@ -257,11 +293,6 @@
         flex-direction: column-reverse;
         justify-content: space-evenly;
     }
-    .hero::before{
-        left: -3rem;
-        top: 33rem;
-        width: 122%;
-    }
     #hero-fig-svg{
         height: 400px;
         width: 350px;
@@ -270,11 +301,21 @@
         flex-direction: column;
         height: max-content;
     }
+    .product-section-header{
+        font-size: 1.6rem;
+    }
+    .product-header{
+        font-size: 1.3rem;
+    }
+    .product-price{
+        font-size: 1rem;
+    }
     .product-card-img{
         width: 100%;
     }
     .product-defination{
         width: 100%;
+        font-size: 0.9rem;
     }
     .product-anchor{
         font-size: small;
