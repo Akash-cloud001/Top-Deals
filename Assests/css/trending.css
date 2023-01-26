@@ -1,0 +1,119 @@
+@import './style.css';
+@import './homepage.css';
+@import './homepage.css';
+
+/* 
+
+.breadcrumbs{
+    position: absolute;
+    top: 80px;
+    padding-inline: calc(var(--p-15));
+    font-size: larger;
+    background-color: var(--c-darker-white);
+    width: 100%;
+}
+
+.breadcrumbs-anchor{
+    color: var(--c-grey-blue);
+} */
+.trending-hero{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-around;
+    overflow: hidden;
+    align-items: center;
+    padding-inline: var(--p-60);
+}
+.trending-hero::before{
+    position: absolute;
+    top:30px;
+    left: -20rem;
+    height: 100vh;
+    width: 50%;
+    content: '';
+    background: url('../images/svgs/2730317-e1e3e5.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: 0.4;
+}
+.trending-hero-bg{
+    object-fit: contain;
+    height: 500px;
+    width: 730px;
+    transition: all var(--transition);
+
+}
+.trending-hero-header{
+    font-family: var(--ff-passion) ;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--c-green);
+    z-index: 1;
+}
+@media screen and (max-width:1440px){
+    .trending-hero-header{
+        font-size: 3rem;
+    }
+    .trending-hero::before{
+        left: -19rem;
+    }
+    .trending-hero-bg{
+        height: 400px;
+        width: 550px;
+    }
+}
+@media screen and ( max-width:1024px){
+    .trending-hero::before {
+        left: -19rem;
+        top: 4rem;
+        width: 100%;
+    }
+}
+@media screen and (max-width:950px){
+    .trending-hero-header{
+        font-size: 2.4rem;
+    }
+    .trending-hero::before{
+        left: -19rem;
+        top: 5rem;
+        width: 100%;
+    }
+    .trending-hero-bg{
+        height: 400px;
+        width: 500px;
+    }
+}
+@media screen and (max-width:768px){
+    .trending-hero-header{
+        font-size: 2.4rem;
+    }
+    .trending-hero::before{
+        display: none;
+    }
+    .trending-hero-bg{
+        height: 400px;
+        width: 500px;
+    }
+}
+@media screen and (max-width:481px){
+    .trending-hero{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+    .trending-hero-bg{
+        height: 400px;
+        width: 460px;
+    }
+}
+@media screen and (max-width:320px){
+    .trending-hero-header{
+        font-size: 2.4rem;
+    }
+    .trending-hero-bg{
+        height: 400px;
+        width: 385px;
+    }
+}

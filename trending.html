@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
 
     <!-- Remixicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -13,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./Assests/css/homepage.css">
+    <link rel="stylesheet" href="./Assests/css/trending.css">
 
     <!-- JavaScript -->
     <script src="./Assests/js/script.js" defer></script>
@@ -21,8 +20,8 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./Assests/images/logo.png" type="image/x-icon">
     
-    <!-- Title -->
-    <title>E-Commerce</title>
+    <!-- title -->
+    <title>E-Commerce Trending</title>
 </head>
 <body>
     <nav class="nav">
@@ -33,7 +32,7 @@
         <ul id="nav-ul-id" class="nav-ul">
             
             <li class="nav-ul-li">
-                <a href="./trending.html" onclick="removeToggleClass()" target="_blank">
+                <a href="https://remixicon.com/" onclick="removeToggleClass()">
                     Trending
                 </a>
             </li>
@@ -87,24 +86,27 @@
         </button>
     </nav>
 
+    
     <!-- hidden layer -->
     <div id="dropdown-lay1" class="dropdown-layer hide" onclick="toggleClass()"></div>
 
-    <section class="hero">
-        <div class="hero-header">
-            <div class="hero-header-one">BEST</div>
-            <div class="hero-header-two">DEALS & OFFERS</div>
-
+<!-- breadcrumbs -->
+    <!-- <div class="breadcrumbs">
+        <code>
+            <a class="breadcrumbs-anchor" href="./index.html">Home ></a>
+            <a href="" class="breadcrumbs-anchor">Trending</a>
+        </code>
+    </div> -->
+    <section class="trending-hero">
+        <div class="trending-hero-header">
+            Trending
         </div>
-        <figure class="hero-fig">
-            <img id="hero-fig-svg" src="./Assests/images/svgs/newBg.svg" alt="hero-img" loading="lazy">
-        </figure>
+        <img src="Assests/images/11115.jpg" alt="" class="trending-hero-bg">
+        
+        <!-- <a href="https://www.freepik.com/free-vector/tiny-people-near-hashtag-social-media-flat-illustration_11235931.htm#query=trending&position=1&from_view=search&track=sph">Image by pch.vector</a> on Freepik -->
     </section>
-    
-    <section id="amazonDeals" class="products-container">
-        <h1 class="product-section-header">
-            Amazon Deals
-        </h1>
+
+    <section id="trendingProducts" class="products-container">
         <div class="product-card-container">
             <figure class="product-card-img">
                 <img src="./Assests/images/shoping-card-img.jpg" alt="" class="product-img" loading="lazy">
@@ -124,27 +126,8 @@
                 <a href="#" class="product-anchor">Read more</a>
             </div>
         </div>
-        <div class="product-card-container">
-            <figure class="product-card-img">
-                <img src="./Assests/images/shoping-card-img.jpg" alt="" class="product-img" loading="lazy">
-            </figure>
-            <div class="product-details">
-                <h2 class="product-header">
-                    Phone
-                </h2>
-                <h3 class="product-price">
-                    100.00$
-                </h3>
-                <p class="product-defination">
-                    Supports All India 5G Bands - All sub-6mm-wave bands being auctioned and bought by Operators in India
-                    
-                </p>
-                <a href="#" class="product-anchor">Read more</a>
-            </div>
-        </div>
     </section>
-
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script src="./Assests/js/loadData.js"></script>
+    <script src="./Assests/js/trendingLoadData.js"></script>
 </body>
 </html>

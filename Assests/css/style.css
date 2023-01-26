@@ -224,14 +224,14 @@ a{
 }
 
 /* breadcrumbs */
-.breadcrumbs{
+/* .breadcrumbs{
     position: absolute;
     top: 80px;
     padding-inline: calc(var(--p-15));
     font-size: large;
     background-color: var(--c-lighter-grey);
     width: 100%;
-}
+} */
 
 
 
@@ -283,8 +283,8 @@ a{
         grid-template-columns: 1fr;
         top: 100%;
         right: -110vw;
-        width: 97vw;
-        height: 100vh;
+        width: 100vw;
+        height: 88vh;
         gap: 0px;
         background: var(--c-darker-white);
         color: black;
@@ -306,7 +306,7 @@ a{
         background: var(--c-darker-white);
     }
     .social-handles{
-        grid-row-start: 7;
+        grid-row-start: 8;
         display: flex;
         width: 100%;
         margin-inline: auto;
