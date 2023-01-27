@@ -13,13 +13,6 @@ function toggleClass(event){
     dropdownLayer.classList.toggle("hide");
 }
 
-function removeToggleClass(){
-    if(!dropdown.classList.contains("hide")){
-        dropdown.classList.add("hide");
-        dropdownLayer.classList.add("hide");
-    }
-}
-
 function hamburgerFunct(event){
     dropdownLayer.classList.toggle("hide");
     lineOne.classList.toggle("line-f");
