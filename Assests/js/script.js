@@ -19,5 +19,4 @@ function hamburgerFunct(event){
     lineTwo.classList.toggle("line-s");
     lineThree.classList.toggle("line-t");
     navUnorderedList.classList.toggle("nav-ul-slider");
-    removeToggleClass();
 }
