@@ -25,9 +25,17 @@ $(document).ready(()=>{
                     <h2 class="product-header">
                         ${products[product].first_name}
                     </h2>
-                    <h3 class="product-price">
-                        ${products[product].id}&nbsp;&#x20B9;
-                    </h3>
+                    <div class="product-price">
+                        <strong class="discounted-price">
+                            ${products[product].id}&nbsp;&#x20B9;
+                        </strong>
+                        <div class="original-price">
+                            200.00$
+                        </div>
+                        <div class="percentage-off">
+                            14% off
+                        </div>                   
+                    </div>
                     <p class="product-defination">
                         ${products[product].last_name}                    
                     </p>
@@ -68,7 +76,8 @@ $(document).ready(()=>{
                 createTheProductCards(productData);
             },
             error: ()=>{
-                alert('error data not found')
+                // alert('error data not found')
+                console.log("data not found")
             }
         })
     }
